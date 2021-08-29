@@ -45,7 +45,17 @@ app.post('/account', (request, response) => {
 
 app.get('/statement', verifyIfExistsAccountCPF, (request, response) => {
   const { costumer } = request;
-  return response.json(costumer.statement);
+  const { date } = request.query;
+
+  if (!date) {
+    return response.json(costumer.statement);
+  }
+
+  const dateFormat = new Date(date + ' 00:00');
+  const statement = costumer.statement.filter(statement => statement.created_at.toDateString() === new Date(dateFormat).toDateString());
+
+  return response.json(statement);
+
 });
 
 app.post('/deposit', verifyIfExistsAccountCPF, (request, response) => {
