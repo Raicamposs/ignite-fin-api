@@ -1,26 +1,27 @@
-_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58d27b94c6
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58bc008e06
 type: Request
-parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630262226934
-created: 1630256372728
+parentId: fld_wrk_7c4f0bd567674fd185fcdd1afb72ff58ca20728d
+modified: 1630278746771
+created: 1630278746771
 url: "{{ base_url }}/account"
-name: adds a account item
+name: Modify a account item
 description: ""
-method: POST
+method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-      "name": "Allana Adriana Isabela Moraes",
-      "cpf": "927.496.516-89"
+      "name": "Isabela Moraes"
     }
 parameters: []
 headers:
+  - name: cpf
+    disabled: false
+    value: "92749651689"
   - name: Content-Type
     value: application/json
-    id: pair_8859a21b30ae4a0590e39235249f7e12
 authentication: {}
-metaSortKey: -1630259819002.5
+metaSortKey: -1630278746771
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

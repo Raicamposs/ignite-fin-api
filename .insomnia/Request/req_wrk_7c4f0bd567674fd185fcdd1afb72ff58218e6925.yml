@@ -1,8 +1,8 @@
 _id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58218e6925
 type: Request
-parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630267904681
-created: 1630267904681
+parentId: fld_wrk_7c4f0bd567674fd185fcdd1afb72ff58e8c39c4d
+modified: 1630278746763
+created: 1630278746763
 url: "{{ base_url }}/withdraw"
 name: Withdrawal on an account
 description: ""
@@ -21,7 +21,7 @@ headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1630267904681
+metaSortKey: -1630278746763
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,23 +1,20 @@
-_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff5890cb933b
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58544d7e08
 type: Request
-parentId: fld_wrk_7c4f0bd567674fd185fcdd1afb72ff58e8c39c4d
-modified: 1630278746768
-created: 1630278746768
-url: "{{ base_url }}/statement"
-name: Search statement
+parentId: fld_wrk_7c4f0bd567674fd185fcdd1afb72ff58ca20728d
+modified: 1630278746769
+created: 1630278746769
+url: "{{ base_url }}/account"
+name: Fetch account data
 description: ""
 method: GET
 body: {}
-parameters:
-  - name: date
-    disabled: true
-    value: 2021-08-29
+parameters: []
 headers:
   - name: cpf
     disabled: false
     value: "92749651689"
 authentication: {}
-metaSortKey: -1630278746768
+metaSortKey: -1630278746769
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

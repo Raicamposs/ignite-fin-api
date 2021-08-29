@@ -1,23 +1,20 @@
-_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff5890cb933b
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff5815eb7f94
 type: Request
 parentId: fld_wrk_7c4f0bd567674fd185fcdd1afb72ff58e8c39c4d
-modified: 1630278746768
-created: 1630278746768
-url: "{{ base_url }}/statement"
-name: Search statement
+modified: 1630275502925
+created: 1630275502925
+url: "{{ base_url }}/balance"
+name: Search balance
 description: ""
 method: GET
 body: {}
-parameters:
-  - name: date
-    disabled: true
-    value: 2021-08-29
+parameters: []
 headers:
   - name: cpf
     disabled: false
     value: "92749651689"
 authentication: {}
-metaSortKey: -1630278746768
+metaSortKey: -1630275502925
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
