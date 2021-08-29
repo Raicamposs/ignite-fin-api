@@ -104,7 +104,12 @@ app.put('/account', verifyIfExistsAccountCPF, (request, response) => {
 
 app.get('/account', verifyIfExistsAccountCPF, (request, response) => {
   const { costumer } = request;
-  return response.json(costumer);
+  return response.json({ ...costumer, balance: getBalance(costumer.statement) });
+});
+
+app.get('/balance', verifyIfExistsAccountCPF, (request, response) => {
+  const { costumer } = request;
+  return response.json(getBalance(costumer.statement));
 });
 
 app.get('/delete', verifyIfExistsAccountCPF, (request, response) => {

@@ -12,7 +12,7 @@
 - [x] Deve ser possível atualizar dados da conta do cliente
 - [x] Deve ser possível obter dados da conta do cliente 
 - [x] Deve ser possível deletar um conta 
-- [] Deve ser possível consultar o saldo 
+- [x] Deve ser possível consultar o saldo 
 
 ---
 
