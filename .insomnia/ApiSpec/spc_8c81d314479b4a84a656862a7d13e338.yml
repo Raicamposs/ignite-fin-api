@@ -1,8 +1,136 @@
 _id: spc_8c81d314479b4a84a656862a7d13e338
 type: ApiSpec
 parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630247769739
+modified: 1630258408874
 created: 1630247769739
 fileName: Ignite - FinApi
-contents: ""
+contents: "openapi: 3.0.0
+
+  servers:
+
+  \  # Added by API Auto Mocking Plugin
+
+  \  - description: SwaggerHub API Auto Mocking
+
+  \    url: https://virtserver.swaggerhub.com/Raicamposs/ignite-fin-api/1.0.0
+
+  info:
+
+  \  description: Ignite - Trilha Node.js -> Primeiro projeto com Node.js
+
+  \  version: \"1.0.0\"
+
+  \  title: FinAPI
+
+  \  contact:
+
+  \    email: raianejanu@hotmail.com
+
+  \    name: Raiane Campos
+
+  \    url: https://www.linkedin.com/in/raiane-campos-6a225b80/
+
+  \  license:
+
+  \    name: Apache 2.0
+
+  \    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+
+  paths:
+
+  \  /account:
+
+  \    post:
+
+  \      summary: adds a account item
+
+  \      operationId: addInventory
+
+  \      description: Adds an item to the system
+
+  \      responses:
+
+  \        '201':
+
+  \          description: Account created
+
+  \        '400':
+
+  \          description: Costumer already exists
+
+  \      requestBody:
+
+  \        content:
+
+  \          application/json:
+
+  \            schema:
+
+  \              $ref: '#/components/schemas/AccountForm'
+
+  \        description: Account item to add
+
+  \  /statement:
+
+  \    get:
+
+  \      summary: Search statement
+
+  \      operationId: searchStatement
+
+  \      description: Search for the customer's bank statement
+
+  \      parameters:
+
+  \        - in: header
+
+  \          name: cpf
+
+  \          schema:
+
+  \            type: string
+
+  \            example: 92749651689
+
+  \          required: true
+
+  \      responses:
+
+  \        '200':
+
+  \          description: Extract found
+
+  \        '400':
+
+  \          description: Costumer not found
+
+  components:
+
+  \  schemas:
+
+  \    AccountForm:
+
+  \      required:
+
+  \        - name
+
+  \        - cpf
+
+  \      properties:
+
+  \        name:
+
+  \          type: string
+
+  \          example: Allana Adriana Isabela Moraes
+
+  \        cpf:
+
+  \          type: string
+
+  \          example: 927.496.516-89
+
+  \      type: object     \ 
+
+  \      "
 contentType: yaml

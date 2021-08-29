@@ -1,26 +1,26 @@
-_id: req_27ecfdd1fd454c3b85bc190801241b7e
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58d27b94c6
 type: Request
 parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630250305076
-created: 1630247811405
-url: "{{ _.baseURl }}/account"
-name: Create
+modified: 1630256461639
+created: 1630256372728
+url: "{{ base_url }}/account"
+name: adds a account item
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: >-
+  text: |-
     {
-    	"name" : "{% faker 'name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}",
-    	"cpf": "92749651689"
+      "name": "Allana Adriana Isabela Moraes",
+      "cpf": "927.496.516-89"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-    id: pair_d0278d5ea3ea479dab07beb502a7babc
+    id: pair_8859a21b30ae4a0590e39235249f7e12
 authentication: {}
-metaSortKey: -1630247811405
+metaSortKey: -1630256372728
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,0 +1,14 @@
+_id: env_env_db4756c121ecb308e8534f63f13349486078367b_sub
+type: Environment
+parentId: env_db4756c121ecb308e8534f63f13349486078367b
+modified: 1630256372730
+created: 1630256372730
+name: OpenAPI env
+data:
+  scheme: https
+  base_path: /Raicamposs/ignite-fin-api/1.0.0
+  host: virtserver.swaggerhub.com
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1630256372730

@@ -1,21 +1,21 @@
-_id: req_973adb1366af4f74a9c4596a4108d592
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff5890cb933b
 type: Request
 parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630251080369
-created: 1630250260540
-url: "{{ _.baseURl }}/statement"
-name: Statement
+modified: 1630257577561
+created: 1630257562760
+url: "{{ base_url }}/statement"
+name: Search statement
 description: ""
 method: GET
 body: {}
 parameters: []
 headers:
-  - id: pair_5956fffbf19844b8940e19962fe3ddf2
-    name: cpf
+  - name: cpf
+    disabled: false
     value: "92749651689"
-    description: ""
+    id: pair_8b4bfe1096cc4fb5b6e48a0a5fbcadad
 authentication: {}
-metaSortKey: -1630250260540
+metaSortKey: -1630257562760
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
