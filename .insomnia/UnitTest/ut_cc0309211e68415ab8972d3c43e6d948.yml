@@ -1,0 +1,14 @@
+_id: ut_cc0309211e68415ab8972d3c43e6d948
+type: UnitTest
+parentId: uts_87acf46c9f8d482fb10f1d54ab8cd7e0
+modified: 1630249626063
+created: 1630249487235
+requestId: req_27ecfdd1fd454c3b85bc190801241b7e
+name: Returns 400
+code: |-
+  const response = await insomnia.send();
+  expect(response.status).to.equal(400);
+
+  const body = JSON.parse(response.data);
+  expect(body).to.have.property('error');
+  expect(body.error).to.equal('Costumer already exists!');
