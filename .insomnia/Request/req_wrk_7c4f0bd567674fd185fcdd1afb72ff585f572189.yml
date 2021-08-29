@@ -1,26 +1,30 @@
-_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58d27b94c6
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff585f572189
 type: Request
 parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630262226934
-created: 1630256372728
-url: "{{ base_url }}/account"
-name: adds a account item
+modified: 1630262139003
+created: 1630262075245
+url: "{{ base_url }}/deposit"
+name: deposit into an account
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-      "name": "Allana Adriana Isabela Moraes",
-      "cpf": "927.496.516-89"
+      "amount": 2000,
+      "description": "salary"
     }
 parameters: []
 headers:
+  - name: cpf
+    disabled: false
+    value: "92749651689"
+    id: pair_920b4f64b9bd4e4fa0ef2a4c29ce95b7
   - name: Content-Type
     value: application/json
-    id: pair_8859a21b30ae4a0590e39235249f7e12
+    id: pair_2238387aba424244acff010272226310
 authentication: {}
-metaSortKey: -1630259819002.5
+metaSortKey: -1630262075245
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
