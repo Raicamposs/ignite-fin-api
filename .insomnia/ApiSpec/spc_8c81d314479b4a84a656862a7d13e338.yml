@@ -1,7 +1,7 @@
 _id: spc_8c81d314479b4a84a656862a7d13e338
 type: ApiSpec
 parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
-modified: 1630262075312
+modified: 1630267904692
 created: 1630247769739
 fileName: Ignite - FinApi
 contents: "openapi: 3.0.0
@@ -146,9 +146,51 @@ contents: "openapi: 3.0.0
 
   \            schema:
 
-  \              $ref: '#/components/schemas/StatementOperation'
+  \              $ref: '#/components/schemas/DepositOperation'  \ 
 
-  \        description: Account item to add          \ 
+  \  /withdraw:
+
+  \    post:
+
+  \      summary: Withdrawal on an account
+
+  \      operationId: withdrawalAccount
+
+  \      description: Make a withdrawal from a customer's account
+
+  \      parameters:
+
+  \        - in: header
+
+  \          name: cpf
+
+  \          schema:
+
+  \            type: string
+
+  \            example: 92749651689
+
+  \          required: true
+
+  \      responses:
+
+  \        '201':
+
+  \          description: Withdrawal concluid
+
+  \        '400':
+
+  \          description: Costumer not found
+
+  \      requestBody:
+
+  \        content:
+
+  \          application/json:
+
+  \            schema:
+
+  \              $ref: '#/components/schemas/WithdrawalOperation'        \ 
 
   components:
 
@@ -178,7 +220,7 @@ contents: "openapi: 3.0.0
 
   \      type: object
 
-  \    StatementOperation:
+  \    DepositOperation:
 
   \      required:
 
@@ -201,6 +243,22 @@ contents: "openapi: 3.0.0
   \          example: salary
 
   \      type: object \ 
+
+  \    WithdrawalOperation:
+
+  \      required:
+
+  \        - amount
+
+  \      properties:
+
+  \        amount:
+
+  \          type: double
+
+  \          example: 2000
+
+  \      type: object       \ 
 
   \      "
 contentType: yaml

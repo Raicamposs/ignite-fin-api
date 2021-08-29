@@ -1,0 +1,31 @@
+_id: req_wrk_7c4f0bd567674fd185fcdd1afb72ff58218e6925
+type: Request
+parentId: wrk_7c4f0bd567674fd185fcdd1afb72ff58
+modified: 1630267904681
+created: 1630267904681
+url: "{{ base_url }}/withdraw"
+name: Withdrawal on an account
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "amount": 2000
+    }
+parameters: []
+headers:
+  - name: cpf
+    disabled: false
+    value: "92749651689"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1630267904681
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
