@@ -1,8 +1,10 @@
 const express = require('express');
+var cors = require('cors');
 const { v4: uuidV4 } = require('uuid');
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const costumers = [];
 
@@ -27,6 +29,12 @@ function getBalance(statement) {
     return acc - operation.amount;
   }, 0);
 }
+
+
+app.get('/', (_, response) => {
+  return response.send('FinAPI is running');
+
+});
 
 app.post('/account', (request, response) => {
   const { cpf = '', name } = request.body;
@@ -118,4 +126,4 @@ app.get('/delete', verifyIfExistsAccountCPF, (request, response) => {
   return response.status(204).send();
 });
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
