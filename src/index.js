@@ -6,9 +6,22 @@ app.use(express.json());
 
 const costumers = [];
 
+
+function verifyIfExistsAccountCPF(request, response, next) {
+  const { cpf } = request.headers;
+  const [costumer] = costumers.filter(costumer => costumer.cpf === cpf);
+
+  if (!costumer) {
+    return response.status(400).json({ error: 'Costumer not found' })
+  }
+
+  request.costumer = costumer;
+  return next();
+}
+
 app.post('/account', (request, response) => {
   const { cpf = '', name } = request.body;
-  const cpfWithoutMask = cpf.replace('.', '').replace('-', '');
+  const cpfWithoutMask = cpf.replaceAll('.', '').replaceAll('-', '');
 
   const costumerAlreadyExist = costumers.some(costumer => costumer.cpf === cpfWithoutMask);
 
@@ -21,15 +34,9 @@ app.post('/account', (request, response) => {
 });
 
 
-app.get('/statement', (request, response) => {
-  const { cpf } = request.headers;
-  const costumer = costumers.filter(costumer => costumer.cpf === cpf);
-
-  if (!costumer) {
-    return response.status(400).json({ error: 'Costumer not found' })
-  }
-
-  return response.json(costumer.statement ?? []);
+app.get('/statement', verifyIfExistsAccountCPF, (request, response) => {
+  const { costumer } = request;
+  return response.json(costumer.statement);
 });
 
 app.listen(3333);
