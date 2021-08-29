@@ -28,6 +28,12 @@ function getBalance(statement) {
   }, 0);
 }
 
+
+app.get('/', (_, response) => {
+  return response.send('FinAPI is running');
+
+});
+
 app.post('/account', (request, response) => {
   const { cpf = '', name } = request.body;
   const cpfWithoutMask = cpf.replaceAll('.', '').replaceAll('-', '');
