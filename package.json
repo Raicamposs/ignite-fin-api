@@ -4,6 +4,9 @@
   "description": "Ignite - Trilha Node.js -> Primeiro projeto com Node.js",
   "main": "index.js",
   "author": "Raiane Campos",
+  "engines": {
+    "node": "14.x"
+  },
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
